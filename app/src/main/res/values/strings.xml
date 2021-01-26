@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Constraint Layout L17</string>
+    <string name="my_name">Me</string>
+    <string name="brother_name">Brother</string>
+    <string name="sister_name">Sister</string>
+    <string name="mother_name">M</string>
+    <string name="father_name">F</string>
+    <string name="first_grandmother_name">GM 1</string>
+    <string name="first_grandfather_name">GF 1</string>
+    <string name="second_grandmother_name">GM 2</string>
+    <string name="second_grandfather_name">GF 2</string>
+    <string name="first_great_grandmother_name">GGM 1</string>
+    <string name="first_great_grandfather_name">GGF 1</string>
+    <string name="second_great_grandmother_name">GGM 2</string>
+    <string name="second_great_grandfather_name">GGF 2</string>
+    <string name="third_great_grandmother_name">GGM 3</string>
+    <string name="third_great_grandfather_name">GGF 3</string>
+    <string name="fourth_great_grandmother_name">GGM 4</string>
+    <string name="fourth_great_grandfather_name">GGF 4</string>
 </resources>

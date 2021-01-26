@@ -1,14 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/tvMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/my_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvBrother"
+        app:layout_constraintRight_toLeftOf="@id/tvSister"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    <TextView
+        android:id="@+id/tvBrother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/brother_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tvMe"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/sister_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvMe"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/mother_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tvFather"
+        app:layout_constraintTop_toBottomOf="@id/tvMe" />
+
+    <TextView
+        android:id="@+id/tvFather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/father_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvMother"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMe" />
+
+    <TextView
+        android:id="@+id/tvGrandmother1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/first_grandmother_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tvGrandfather1"
+        app:layout_constraintTop_toBottomOf="@id/tvMother" />
+
+    <TextView
+        android:id="@+id/tvGrandfather1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/first_grandfather_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvGrandmother1"
+        app:layout_constraintRight_toLeftOf="@id/tvGrandmother2"
+        app:layout_constraintTop_toBottomOf="@id/tvMother" />
+
+    <TextView
+        android:id="@+id/tvGrandmother2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/second_grandmother_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvGrandfather1"
+        app:layout_constraintRight_toLeftOf="@id/tvGrandfather2"
+        app:layout_constraintTop_toBottomOf="@id/tvMother" />
+
+    <TextView
+        android:id="@+id/tvGrandfather2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/second_grandfather_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvGrandmother2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMother" />
+
+    <TextView
+        android:id="@+id/tvGreatGrandmother1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/first_great_grandmother_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tvGreatGrandfather1"
+        app:layout_constraintTop_toBottomOf="@id/tvGrandmother1" />
+
+    <TextView
+        android:id="@+id/tvGreatGrandfather1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/first_great_grandfather_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvGreatGrandmother1"
+        app:layout_constraintRight_toLeftOf="@id/tvGreatGrandmother2"
+        app:layout_constraintTop_toBottomOf="@id/tvGrandmother1" />
+
+    <TextView
+        android:id="@+id/tvGreatGrandmother2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/second_great_grandmother_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvGreatGrandfather1"
+        app:layout_constraintRight_toLeftOf="@id/tvGreatGrandfather2"
+        app:layout_constraintTop_toBottomOf="@id/tvGrandfather1" />
+
+    <TextView
+        android:id="@+id/tvGreatGrandfather2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/second_great_grandfather_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvGreatGrandmother2"
+        app:layout_constraintRight_toLeftOf="@+id/tvGreatGrandmother3"
+        app:layout_constraintTop_toBottomOf="@id/tvGrandfather1" />
+
+    <TextView
+        android:id="@+id/tvGreatGrandmother3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/third_great_grandmother_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvGreatGrandfather2"
+        app:layout_constraintRight_toLeftOf="@id/tvGreatGrandfather3"
+        app:layout_constraintTop_toBottomOf="@id/tvGrandmother2" />
+
+    <TextView
+        android:id="@+id/tvGreatGrandfather3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/third_great_grandfather_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvGreatGrandmother3"
+        app:layout_constraintRight_toLeftOf="@id/tvGreatGrandmother4"
+        app:layout_constraintTop_toBottomOf="@id/tvGrandmother2" />
+
+    <TextView
+        android:id="@+id/tvGreatGrandmother4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/fourth_great_grandmother_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvGreatGrandfather3"
+        app:layout_constraintRight_toLeftOf="@id/tvGreatGrandfather4"
+        app:layout_constraintTop_toBottomOf="@id/tvGrandfather2" />
+
+    <TextView
+        android:id="@+id/tvGreatGrandfather4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tree_item_text_view_marginTop"
+        android:text="@string/fourth_great_grandfather_name"
+        android:textSize="@dimen/tree_item_text_view_textSize"
+        app:layout_constraintLeft_toRightOf="@id/tvGreatGrandmother4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGrandfather2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
