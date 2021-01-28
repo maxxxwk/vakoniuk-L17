@@ -39,6 +39,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvMe, tvBrother, tvSister" />
+
     <TextView
         android:id="@+id/tvMother"
         android:layout_width="wrap_content"
@@ -48,7 +55,7 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/tvFather"
-        app:layout_constraintTop_toBottomOf="@id/tvMe" />
+        app:layout_constraintTop_toBottomOf="@id/barrier1" />
 
     <TextView
         android:id="@+id/tvFather"
@@ -59,7 +66,14 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toRightOf="@id/tvMother"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvMe" />
+        app:layout_constraintTop_toBottomOf="@id/barrier1" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvMother, tvFather" />
 
     <TextView
         android:id="@+id/tvGrandmother1"
@@ -70,7 +84,7 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/tvGrandfather1"
-        app:layout_constraintTop_toBottomOf="@id/tvMother" />
+        app:layout_constraintTop_toBottomOf="@id/barrier2" />
 
     <TextView
         android:id="@+id/tvGrandfather1"
@@ -81,7 +95,7 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toRightOf="@id/tvGrandmother1"
         app:layout_constraintRight_toLeftOf="@id/tvGrandmother2"
-        app:layout_constraintTop_toBottomOf="@id/tvMother" />
+        app:layout_constraintTop_toBottomOf="@id/barrier2" />
 
     <TextView
         android:id="@+id/tvGrandmother2"
@@ -92,7 +106,7 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toRightOf="@id/tvGrandfather1"
         app:layout_constraintRight_toLeftOf="@id/tvGrandfather2"
-        app:layout_constraintTop_toBottomOf="@id/tvMother" />
+        app:layout_constraintTop_toBottomOf="@id/barrier2" />
 
     <TextView
         android:id="@+id/tvGrandfather2"
@@ -103,7 +117,14 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toRightOf="@id/tvGrandmother2"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvMother" />
+        app:layout_constraintTop_toBottomOf="@id/barrier2" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvGrandfather1, tvGrandfather2, tvGrandmother1, tvGrandmother2" />
 
     <TextView
         android:id="@+id/tvGreatGrandmother1"
@@ -114,7 +135,7 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/tvGreatGrandfather1"
-        app:layout_constraintTop_toBottomOf="@id/tvGrandmother1" />
+        app:layout_constraintTop_toBottomOf="@id/barrier3" />
 
     <TextView
         android:id="@+id/tvGreatGrandfather1"
@@ -125,7 +146,7 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toRightOf="@id/tvGreatGrandmother1"
         app:layout_constraintRight_toLeftOf="@id/tvGreatGrandmother2"
-        app:layout_constraintTop_toBottomOf="@id/tvGrandmother1" />
+        app:layout_constraintTop_toBottomOf="@id/barrier3" />
 
     <TextView
         android:id="@+id/tvGreatGrandmother2"
@@ -136,7 +157,7 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toRightOf="@id/tvGreatGrandfather1"
         app:layout_constraintRight_toLeftOf="@id/tvGreatGrandfather2"
-        app:layout_constraintTop_toBottomOf="@id/tvGrandfather1" />
+        app:layout_constraintTop_toBottomOf="@id/barrier3" />
 
     <TextView
         android:id="@+id/tvGreatGrandfather2"
@@ -147,7 +168,7 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toRightOf="@id/tvGreatGrandmother2"
         app:layout_constraintRight_toLeftOf="@+id/tvGreatGrandmother3"
-        app:layout_constraintTop_toBottomOf="@id/tvGrandfather1" />
+        app:layout_constraintTop_toBottomOf="@id/barrier3" />
 
     <TextView
         android:id="@+id/tvGreatGrandmother3"
@@ -159,7 +180,7 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toRightOf="@id/tvGreatGrandfather2"
         app:layout_constraintRight_toLeftOf="@id/tvGreatGrandfather3"
-        app:layout_constraintTop_toBottomOf="@id/tvGrandmother2" />
+        app:layout_constraintTop_toBottomOf="@id/barrier3" />
 
     <TextView
         android:id="@+id/tvGreatGrandfather3"
@@ -171,7 +192,7 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toRightOf="@id/tvGreatGrandmother3"
         app:layout_constraintRight_toLeftOf="@id/tvGreatGrandmother4"
-        app:layout_constraintTop_toBottomOf="@id/tvGrandmother2" />
+        app:layout_constraintTop_toBottomOf="@id/barrier3" />
 
     <TextView
         android:id="@+id/tvGreatGrandmother4"
@@ -183,7 +204,7 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toRightOf="@id/tvGreatGrandfather3"
         app:layout_constraintRight_toLeftOf="@id/tvGreatGrandfather4"
-        app:layout_constraintTop_toBottomOf="@id/tvGrandfather2" />
+        app:layout_constraintTop_toBottomOf="@id/barrier3" />
 
     <TextView
         android:id="@+id/tvGreatGrandfather4"
@@ -194,5 +215,5 @@
         android:textSize="@dimen/tree_item_text_view_textSize"
         app:layout_constraintLeft_toRightOf="@id/tvGreatGrandmother4"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvGrandfather2" />
+        app:layout_constraintTop_toBottomOf="@id/barrier3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
